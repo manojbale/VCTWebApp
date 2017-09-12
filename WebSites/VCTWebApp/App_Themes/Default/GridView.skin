@@ -1,0 +1,315 @@
+﻿<%--
+Default skin template. The following skins are provided as examples only.
+
+1. Named control skin. The SkinId should be uniquely defined because
+   duplicate SkinId's per control type are not allowed in the same theme.
+
+<asp:GridView runat="server" SkinId="gridviewSkin" BackColor="White" >
+   <AlternatingRowStyle BackColor="Blue" />
+</asp:GridView>
+
+2. Default skin. The SkinId is not defined. Only one default 
+   control skin per control type is allowed in the same theme.
+
+<asp:Image runat="server" ImageUrl="~/images/image1.jpg" />
+--%>
+<asp:GridView runat="server" SkinId="GridView" BackColor="White" BorderColor="#B8E3F3" BorderWidth="1px" CellPadding="0" CellSpacing= "0" Font-Size="10px" ForeColor="Black" GridLines="Both" BorderStyle="Solid" width="100%">
+            <FooterStyle 
+                BackColor="#CCCC99" />
+           
+         
+            <SelectedRowStyle 
+                BackColor="#82CCE7" 
+                ForeColor="White" 
+                Font-Bold="True"
+                Font-Names="Verdana, Helvetica, sans-serif" 
+                Font-Size="8pt" 
+                VerticalAlign="Middle"
+                />
+         
+            <HeaderStyle 
+                BackColor="#4f81bd"
+                Font-Bold="True" 
+                Font-Names="Verdana, Helvetica, sans-serif"
+                Font-Size="12px" 
+                ForeColor="#ffffff" 
+                HorizontalAlign="Center"
+                VerticalAlign="Top"
+                CssClass="alt"  />
+            <AlternatingRowStyle 
+                Font-Bold="False" 
+                Font-Names="Verdana, Helvetica, sans-serif"
+                Font-Size="8pt" 
+                VerticalAlign="Middle"
+                BackColor="#dbe5f1" 
+                HorizontalAlign="Left" 
+                CssClass="divstyle alt" />
+            <EmptyDataRowStyle 
+                Font-Bold="False" 
+                Font-Names="Verdana, Helvetica, sans-serif"
+                Font-Size="8pt"
+                BackColor="#DCF2FB" />
+            <RowStyle 
+                BackColor="#b8ccf4"
+                Font-Bold="False" 
+                Font-Names="Verdana, Helvetica, sans-serif"
+                Font-Size="8pt" VerticalAlign="Middle"
+                HorizontalAlign="Left" CssClass="divstyle alt"
+            />
+            <EditRowStyle 
+                Font-Bold="False" 
+                Font-Names="Verdana, Helvetica, sans-serif"
+                Font-Size="8pt"
+                BackColor="#82CCE7" CssClass="divstyle"
+                HorizontalAlign="Left"
+            />
+            
+</asp:GridView>
+<asp:GridView runat="server" SkinId="GridViewCal" BackColor="White" BorderColor="#B8E3F3" BorderWidth="1px" CellPadding="2" Font-Size="10px" ForeColor="Black" GridLines="Both" BorderStyle="Solid" width="100%">
+            <FooterStyle 
+                BackColor="#CCCC99" />
+            <SelectedRowStyle 
+                BackColor="#82CCE7" 
+                ForeColor="White" 
+                Font-Bold="True"
+                Font-Names="Tahoma,Helvetica,sans-serif" 
+                Font-Size="8pt" 
+                VerticalAlign="Middle"
+                />
+            <PagerStyle 
+                BackColor="#C7EBF9" 
+                ForeColor="#4690AB" 
+                HorizontalAlign="Right" 
+                Font-Names="Tahoma,Helvetica,sans-serif" 
+                Font-Size="8pt"
+                CssClass="alt" />
+            <HeaderStyle 
+                BackColor="#3D77C3"
+                BorderColor="#3366CC"
+                Font-Bold="True" 
+                Font-Names="Tahoma,Helvetica,sans-serif"
+                Font-Size="12px" 
+                ForeColor= "#FFFFFF"
+                HorizontalAlign="Center"
+                VerticalAlign="Top"
+                CssClass="alt"  />
+            <AlternatingRowStyle 
+                BackColor="#FFFFFF"
+                Font-Bold="False" 
+                Font-Names="Tahoma,Helvetica,sans-serif"
+                Font-Size="10pt" 
+                VerticalAlign="Middle"
+                HorizontalAlign="Left" 
+                CssClass="divstyle alt" />
+            <EmptyDataRowStyle 
+                Font-Bold="False" 
+                Font-Names="Tahoma,Helvetica,sans-serif"
+                Font-Size="8pt"
+                BackColor="#DCF2FB" />
+            <RowStyle 
+                BackColor="#FFFFFF"
+                Font-Bold="False" 
+                Font-Names="Tahoma,Helvetica,sans-serif"
+                Font-Size="10pt" 
+                VerticalAlign="Middle"
+                HorizontalAlign="Left" 
+                CssClass="divstyle alt" />
+            <EditRowStyle 
+                Font-Bold="False" 
+                Font-Names="Tahoma,Helvetica,sans-serif"
+                Font-Size="8pt"
+                BackColor="#82CCE7" 
+                CssClass="divstyle"
+                HorizontalAlign="Left"
+            />            
+</asp:GridView>
+<asp:GridView runat="server" SkinId="GridViewCalMonth" BackColor="White" BorderColor="#B8E3F3" BorderWidth="1px" CellPadding="2" Font-Size="10px" ForeColor="Black" GridLines="Both" BorderStyle="Solid" width="100%">
+            <FooterStyle 
+                BackColor="#CCCC99" />
+            <SelectedRowStyle 
+                BackColor="#82CCE7" 
+                ForeColor="White" 
+                Font-Bold="True"
+                Font-Names="Tahoma,Helvetica,sans-serif" 
+                Font-Size="8pt" 
+                VerticalAlign="Middle"
+                />
+            <PagerStyle 
+                BackColor="#C7EBF9" 
+                ForeColor="#4690AB" 
+                HorizontalAlign="Right" 
+                Font-Names="Tahoma,Helvetica,sans-serif" 
+                Font-Size="8pt"
+                CssClass="alt" />
+            <HeaderStyle 
+                BackColor="#3D77C3"
+                BorderColor="#3366CC"
+                Font-Bold="True" 
+                Font-Names="Tahoma,Helvetica,sans-serif"
+                Font-Size="12px" 
+                ForeColor= "#FFFFFF"
+                HorizontalAlign="Center"
+                VerticalAlign="Top"
+                CssClass="alt"  />
+            <AlternatingRowStyle 
+                BackColor="#FFFFFF"
+                Font-Bold="False" 
+                Font-Names="Tahoma,Helvetica,sans-serif"
+                Font-Size="10pt" 
+                VerticalAlign="Middle"
+                HorizontalAlign="Left" 
+                CssClass="divstyle alt" />
+            <EmptyDataRowStyle 
+                Font-Bold="False" 
+                Font-Names="Tahoma,Helvetica,sans-serif"
+                Font-Size="8pt"
+                BackColor="#DCF2FB" />
+            <RowStyle 
+                BackColor="#F6FCFE"
+                Font-Bold="False" 
+                Font-Names="Tahoma,Helvetica,sans-serif"
+                Font-Size="10pt" 
+                VerticalAlign="Middle"
+                HorizontalAlign="Left" 
+                CssClass="divstyleHeader alt"
+            />
+            <EditRowStyle 
+                Font-Bold="False" 
+                Font-Names="Tahoma,Helvetica,sans-serif"
+                Font-Size="8pt"
+                BackColor="#82CCE7" 
+                CssClass="divstyle"
+                HorizontalAlign="Left"
+            />            
+</asp:GridView>
+
+<asp:GridView runat="server" SkinId="GridViewConfig" BackColor="White" BorderColor="#B8E3F3" BorderWidth="1px" CellPadding="2" Font-Size="10px" ForeColor="Black" GridLines="Both" BorderStyle="Solid" width="100%">
+            <FooterStyle 
+                BackColor="#CCCC99" />
+            <SelectedRowStyle 
+                BackColor="#82CCE7" 
+                ForeColor="White" 
+                Font-Bold="True"
+                Font-Names="Verdana, Helvetica, sans-serif" 
+                Font-Size="8pt" 
+                VerticalAlign="Middle"
+                />
+            <PagerStyle 
+                BackColor="#C7EBF9" 
+                ForeColor="#4690AB" 
+                HorizontalAlign="Right" 
+                Font-Names="Verdana, Helvetica, sans-serif" 
+                Font-Size="8pt" />
+            <HeaderStyle 
+                BackColor="#B8E3F3"
+                Font-Bold="True" 
+                Font-Names="Verdana, Helvetica, sans-serif"
+                Font-Size="12px" 
+                ForeColor="#4690AB" 
+                HorizontalAlign="Center"
+                VerticalAlign="Top" />
+            <AlternatingRowStyle 
+                Font-Bold="False" 
+                Font-Names="Verdana, Helvetica, sans-serif"
+                Font-Size="8pt" VerticalAlign="Middle"
+                BackColor="#D4EFFA" HorizontalAlign="Left" />
+            <EmptyDataRowStyle 
+                Font-Bold="False" 
+                Font-Names="Verdana, Helvetica, sans-serif"
+                Font-Size="8pt"
+                BackColor="#DCF2FB" />
+            <RowStyle 
+                BackColor="#DCF2FB"
+                Font-Bold="False" 
+                Font-Names="Verdana, Helvetica, sans-serif"
+                Font-Size="8pt" VerticalAlign="Middle"
+                HorizontalAlign="Left" 
+            />
+            <EditRowStyle 
+                Font-Bold="False" 
+                Font-Names="Verdana, Helvetica, sans-serif"
+                Font-Size="8pt"
+                BackColor="#82CCE7" 
+                HorizontalAlign="Left"
+            />
+            
+</asp:GridView>
+
+<asp:GridView runat="server" SkinId="GridView_Scroll" BackColor="White" BorderColor="#B8E3F3" BorderWidth="1px" CellPadding="4" Font-Size="10px" ForeColor="Black" GridLines="Both" BorderStyle="Solid" width="100%">
+            <FooterStyle 
+                BackColor="#CCCC99" />
+            <SelectedRowStyle 
+                BackColor="#82CCE7" 
+                ForeColor="White" 
+                Font-Names="Verdana, Helvetica, sans-serif" 
+                Font-Size="8pt" />
+            <PagerStyle 
+                BackColor="#C7EBF9" 
+                ForeColor="#4690AB" 
+                HorizontalAlign="Right" 
+                Font-Names="Verdana, Helvetica, sans-serif" 
+                Font-Size="8pt" />
+            <HeaderStyle 
+                BackColor="#B8E3F3"
+                Font-Bold="True" 
+                Font-Names="Verdana, Helvetica, sans-serif"
+                Font-Size="12px" 
+                ForeColor="#4690AB" 
+                HorizontalAlign="Center" />
+            <AlternatingRowStyle 
+                Font-Bold="False" 
+                Font-Names="Verdana, Helvetica, sans-serif"
+                Font-Size="8pt" VerticalAlign="Top"
+                BackColor="#D4EFFA" 
+                HorizontalAlign="Left" 
+                CssClass="divstyle" />
+            <EmptyDataRowStyle 
+                Font-Bold="False" 
+                Font-Names="Verdana, Helvetica, sans-serif"
+                Font-Size="8pt"
+                BackColor="#DCF2FB" />
+            <RowStyle 
+                BackColor="#DCF2FB"
+                Font-Bold="False" 
+                Font-Names="Verdana, Helvetica, sans-serif"
+                Font-Size="8pt" 
+                VerticalAlign="Top"
+                HorizontalAlign="Left" 
+                CssClass="divstyle" />
+            <EditRowStyle 
+                Font-Bold="False" 
+                Font-Names="Verdana, Helvetica, sans-serif"
+                Font-Size="8pt"
+                BackColor="#82CCE7" 
+                CssClass="divstyle" />
+</asp:GridView>
+
+<asp:DataGrid runat="server" SkinId="DataGrid" BackColor="White" BorderColor="#B8E3F3" BorderWidth="1px" CellPadding="1" Font-Size="10px" ForeColor="Black" GridLines="Both" BorderStyle="Solid" width="100%">
+            <FooterStyle 
+                BackColor="#CCCC99" />
+            <SelectedItemStyle 
+                BackColor="Silver" 
+                ForeColor="White" 
+                Font-Bold="True"
+                Font-Names="Verdana, Helvetica, sans-serif" 
+                Font-Size="8pt" />
+            <HeaderStyle 
+                BackColor="#B8E3F3"
+                Font-Bold="True" 
+                Font-Names="Verdana, Helvetica, sans-serif"
+                Font-Size="12px" 
+                ForeColor="#4690AB" 
+                HorizontalAlign="Center" />
+            <AlternatingItemStyle 
+                Font-Bold="False" 
+                Font-Names="Verdana, Helvetica, sans-serif"
+                Font-Size="8pt" 
+                BackColor="#D4EFFA" />
+            <ItemStyle 
+                BackColor="#DCF2FB"
+                Font-Bold="False" 
+                Font-Names="Verdana, Helvetica, sans-serif"
+                Font-Size="8pt"
+                HorizontalAlign="Left"
+            />
+</asp:DataGrid>

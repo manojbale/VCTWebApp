@@ -1,0 +1,44 @@
+﻿<%--
+Default skin template. The following skins are provided as examples only.
+
+1. Named control skin. The SkinId should be uniquely defined because
+   duplicate SkinId's per control type are not allowed in the same theme.
+
+<asp:GridView runat="server" SkinId="gridviewSkin" BackColor="White" >
+   <AlternatingRowStyle BackColor="Blue" />
+</asp:GridView>
+
+2. Default skin. The SkinId is not defined. Only one default 
+   control skin per control type is allowed in the same theme.
+
+<asp:Image runat="server" ImageUrl="~/images/image1.jpg" />
+--%>
+
+ <%-- Main menu --%>
+  <%--
+ <asp:Menu runat="server" SkinID="Menu" DynamicHorizontalOffset="0" DynamicVerticalOffset="0"
+    Font-Names="Verdana" Font-Size="8pt" ForeColor="#FFFFFF" Orientation="Horizontal"
+    StaticSubMenuIndent="20px" Font-Bold="false" >
+    <StaticMenuStyle CssClass="clsMenu" ForeColor="#000000"  />
+    <StaticMenuItemStyle  CssClass="clsMenu" Font-Names="Verdana" Font-Size="8pt" Font-Bold="True"   />
+    <DynamicHoverStyle CssClass="dmmenu" BackColor="#DAEAFF"  ForeColor="#000000" Font-Names="Verdana" Font-Size="8pt" Font-Bold="true"  />
+    <DynamicMenuStyle CssClass="dmmenu IE8Fix" BackColor="#4279C3" />
+    <StaticSelectedStyle CssClass="clsMenu" Font-Italic="False" Font-Names="Verdana" Font-Size="8pt" Font-Bold="True" ForeColor="Black" />
+    <DynamicSelectedStyle CssClass="dmmenu" Font-Names="Verdana" Font-Size="8pt" Font-Bold="True" Font-Overline="False" />
+    <DynamicMenuItemStyle CssClass="dmmenu" Font-Names="Verdana" Font-Size="8pt" Font-Bold="true" BackColor="#4279C3" ForeColor="#FFFFFF"  ItemSpacing="0px"  />
+    <StaticHoverStyle ForeColor="#000000" Font-Bold="true" Font-Italic="False" Font-Names="Verdana" Font-Size="8pt" BackColor="#DAEAFF" BorderStyle="None" />
+</asp:Menu>
+--%>
+
+<asp:Menu runat="server" SkinID="Menu" DynamicHorizontalOffset="0" DynamicVerticalOffset="0"
+    Font-Names="Verdana" Font-Size="8pt" ForeColor="#FFFFFF" BackColor="#114c90" Orientation="Horizontal"
+    StaticSubMenuIndent="20px" Font-Bold="false" CssClass="menu-head" >
+    <StaticMenuStyle CssClass="clsMenu" ForeColor="#FFFFFF"  />
+    <StaticMenuItemStyle  CssClass="clsMenu" Font-Names="Verdana" Font-Size="8pt" Font-Bold="True"   />
+    <DynamicHoverStyle CssClass="dmmenu" BackColor="#066ac1"  ForeColor="#FFFFFF" Font-Names="Verdana" Font-Size="8pt" Font-Bold="true"  />
+    <DynamicMenuStyle CssClass="dmmenu IE8Fix" BackColor="#114c90" />
+    <StaticSelectedStyle CssClass="clsMenu" Font-Italic="False" Font-Names="Verdana" Font-Size="8pt" Font-Bold="True" ForeColor="Black" />
+    <DynamicSelectedStyle CssClass="dmmenu" Font-Names="Verdana" Font-Size="8pt" Font-Bold="True" Font-Overline="False" />
+    <DynamicMenuItemStyle CssClass="dmmenu" Font-Names="Verdana" Font-Size="8pt" Font-Bold="true" BackColor="#114c90" ForeColor="#FFFFFF"  ItemSpacing="0px"  />
+    <StaticHoverStyle ForeColor="#FFFFFF" Font-Bold="true" Font-Italic="False" Font-Names="Verdana" Font-Size="8pt" BackColor="#066ac1" BorderStyle="None" />
+</asp:Menu>

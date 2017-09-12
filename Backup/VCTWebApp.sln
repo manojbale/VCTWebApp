@@ -1,0 +1,77 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 11.00
+# Visual Studio 2010
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "WebSites", "WebSites", "{E44C6393-18FF-42F4-929C-0A7F4EEF7A94}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "VCTWebApp", "WebSites\VCTWebApp\VCTWebApp.csproj", "{DF2476C8-6AFA-423D-900C-E47D5212C749}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Modules", "Modules", "{1B690015-0E38-4C5C-9EA0-75442D847C61}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Shell", "Modules\Shell\Shell.csproj", "{A5C62685-22AC-4E12-956D-57B192AE4097}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Library", "Library", "{0B83D939-069C-4397-8B45-B25D1D486637}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "VCTWeb.Core.Domain", "Library\VCTWeb.Core.Domain\VCTWeb.Core.Domain.csproj", "{47E03BE3-6451-4C8D-AD73-CEDF5CAF43C2}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CustomControls", "Library\CustomControls\CustomControls.csproj", "{9067FCFC-A690-4F7B-A506-58210967B215}"
+EndProject
+Global
+	GlobalSection(TeamFoundationVersionControl) = preSolution
+		SccNumberOfProjects = 5
+		SccEnterpriseProvider = {4CA58AB2-18FA-4F8D-95D4-32DDF27D184C}
+		SccTeamFoundationServer = http://192.168.10.26:8080/
+		SccLocalPath0 = .
+		SccProjectUniqueName1 = Modules\\Shell\\Shell.csproj
+		SccProjectTopLevelParentUniqueName1 = VCTWebApp.sln
+		SccProjectName1 = Modules/Shell
+		SccLocalPath1 = Modules\\Shell
+		SccProjectUniqueName2 = WebSites\\VCTWebApp\\VCTWebApp.csproj
+		SccProjectTopLevelParentUniqueName2 = VCTWebApp.sln
+		SccProjectName2 = WebSites/VCTWebApp
+		SccLocalPath2 = WebSites\\VCTWebApp
+		SccProjectUniqueName3 = Library\\VCTWeb.Core.Domain\\VCTWeb.Core.Domain.csproj
+		SccProjectTopLevelParentUniqueName3 = VCTWebApp.sln
+		SccProjectName3 = Library/VCTWeb.Core.Domain
+		SccLocalPath3 = Library\\VCTWeb.Core.Domain
+		SccProjectUniqueName4 = Library\\CustomControls\\CustomControls.csproj
+		SccProjectTopLevelParentUniqueName4 = VCTWebApp.sln
+		SccProjectName4 = Library/CustomControls
+		SccLocalPath4 = Library\\CustomControls
+	EndGlobalSection
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{DF2476C8-6AFA-423D-900C-E47D5212C749}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{DF2476C8-6AFA-423D-900C-E47D5212C749}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{DF2476C8-6AFA-423D-900C-E47D5212C749}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{DF2476C8-6AFA-423D-900C-E47D5212C749}.Release|Any CPU.Build.0 = Release|Any CPU
+		{A5C62685-22AC-4E12-956D-57B192AE4097}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A5C62685-22AC-4E12-956D-57B192AE4097}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A5C62685-22AC-4E12-956D-57B192AE4097}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A5C62685-22AC-4E12-956D-57B192AE4097}.Release|Any CPU.Build.0 = Release|Any CPU
+		{47E03BE3-6451-4C8D-AD73-CEDF5CAF43C2}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{47E03BE3-6451-4C8D-AD73-CEDF5CAF43C2}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{47E03BE3-6451-4C8D-AD73-CEDF5CAF43C2}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{47E03BE3-6451-4C8D-AD73-CEDF5CAF43C2}.Release|Any CPU.Build.0 = Release|Any CPU
+		{9067FCFC-A690-4F7B-A506-58210967B215}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{9067FCFC-A690-4F7B-A506-58210967B215}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{9067FCFC-A690-4F7B-A506-58210967B215}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{9067FCFC-A690-4F7B-A506-58210967B215}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{DF2476C8-6AFA-423D-900C-E47D5212C749} = {E44C6393-18FF-42F4-929C-0A7F4EEF7A94}
+		{A5C62685-22AC-4E12-956D-57B192AE4097} = {1B690015-0E38-4C5C-9EA0-75442D847C61}
+		{47E03BE3-6451-4C8D-AD73-CEDF5CAF43C2} = {0B83D939-069C-4397-8B45-B25D1D486637}
+		{9067FCFC-A690-4F7B-A506-58210967B215} = {0B83D939-069C-4397-8B45-B25D1D486637}
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		IsWCSFSolution = True
+		IsWCSFSolutionWAP = True
+		RootNamespace = VCTWebApp
+	EndGlobalSection
+EndGlobal

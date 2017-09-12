@@ -1,0 +1,36 @@
+﻿<%--
+Default skin template. The following skins are provided as examples only.
+
+1. Named control skin. The SkinId should be uniquely defined because
+   duplicate SkinId's per control type are not allowed in the same theme.
+
+<asp:GridView runat="server" SkinId="gridviewSkin" BackColor="White" >
+   <AlternatingRowStyle BackColor="Blue" />
+</asp:GridView>
+
+2. Default skin. The SkinId is not defined. Only one default 
+   control skin per control type is allowed in the same theme.
+
+<asp:Image runat="server" ImageUrl="~/images/image1.jpg" />
+--%>
+<asp:GridView runat="server" SkinId="GridViewDownload" BackColor="White" BorderColor="Black" BorderWidth="1pt" CellPadding="2"  CellSpacing="2"
+Font-Size="10px" ForeColor="Black" GridLines="Both" BorderStyle="Solid" width="100%" >
+            
+              <AlternatingRowStyle BackColor="#DBE5F1" BorderColor="Black" 
+                BorderStyle="Solid" BorderWidth="1pt" Font-Names="Helvetica,sans-serif" 
+                Font-Size="10pt" HorizontalAlign="Left" VerticalAlign="Middle" />
+            
+              <HeaderStyle BackColor="#4F81BD" Font-Names="Helvetica,sans-serif"  BorderColor="Black" 
+                BorderStyle="Solid" BorderWidth="1pt" 
+                Font-Size="11pt" ForeColor="White" HorizontalAlign="Center" 
+                VerticalAlign="Middle" Width="30px" />
+              
+              <RowStyle BackColor="#B8CCF4" BorderColor="Black" BorderStyle="Solid" 
+                BorderWidth="1pt" Font-Names="Helvetica,sans-serif" Font-Size="10pt" 
+                HorizontalAlign="Left" VerticalAlign="Middle" />
+
+               <FooterStyle  BackColor="#B8CCF4" BorderColor="Black" BorderStyle="Solid" 
+                BorderWidth="1pt" Font-Names="Helvetica,sans-serif" Font-Size="10pt" 
+                HorizontalAlign="Left" VerticalAlign="Middle" />
+                  
+</asp:GridView>

@@ -1,0 +1,240 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>9.0.21022</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{A5C62685-22AC-4E12-956D-57B192AE4097}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>VCTWebApp.Shell</RootNamespace>
+    <AssemblyName>Shell</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <FileUpgradeFlags>
+    </FileUpgradeFlags>
+    <OldToolsVersion>3.5</OldToolsVersion>
+    <UpgradeBackupLocation />
+    <PublishUrl>http://localhost/Shell/</PublishUrl>
+    <Install>true</Install>
+    <InstallFrom>Web</InstallFrom>
+    <UpdateEnabled>true</UpdateEnabled>
+    <UpdateMode>Foreground</UpdateMode>
+    <UpdateInterval>7</UpdateInterval>
+    <UpdateIntervalUnits>Days</UpdateIntervalUnits>
+    <UpdatePeriodically>false</UpdatePeriodically>
+    <UpdateRequired>false</UpdateRequired>
+    <MapFileExtensions>true</MapFileExtensions>
+    <ApplicationRevision>0</ApplicationRevision>
+    <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
+    <IsWebBootstrapper>true</IsWebBootstrapper>
+    <UseApplicationTrust>false</UseApplicationTrust>
+    <BootstrapperEnabled>true</BootstrapperEnabled>
+    <TargetFrameworkProfile />
+    <SccProjectName>SAK</SccProjectName>
+    <SccLocalPath>SAK</SccLocalPath>
+    <SccAuxPath>SAK</SccAuxPath>
+    <SccProvider>SAK</SccProvider>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <AllowUnsafeBlocks>false</AllowUnsafeBlocks>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="log4net, Version=1.2.10.0, Culture=neutral, PublicKeyToken=1b44e1d426115821">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\Library\log4net.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Practices.CompositeWeb, Version=3.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\Lib\Microsoft.Practices.CompositeWeb.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Practices.CompositeWeb.EnterpriseLibrary, Version=3.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\Lib\Microsoft.Practices.CompositeWeb.EnterpriseLibrary.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Practices.ObjectBuilder, Version=1.0.51206.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\Lib\Microsoft.Practices.ObjectBuilder.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Transactions" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Web.DynamicData" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Xml.Linq" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="EmailBody.cs" />
+    <Compile Include="EmailHelper.cs" />
+    <Compile Include="Views\eParPlusNotificationSetupPresenter.cs" />
+    <Compile Include="Views\CustomerPARLevelPresenter.cs" />
+    <Compile Include="Views\CustomerPresenter.cs" />
+    <Compile Include="Views\eParPlusConsumptionRateReportPresenter.cs" />
+    <Compile Include="Views\eParPlusLowInventoryReportPresenter.cs" />
+    <Compile Include="Views\eParPlusManualConsumptionPresenter.cs" />
+    <Compile Include="Views\eParPlusOffCartRateReportPresenter.cs" />
+    <Compile Include="Views\eParPlusReaderDashboardPresenter.cs" />
+    <Compile Include="Views\eParPlusShipAndBillReportPresenter.cs" />
+    <Compile Include="Views\eParPlusTransactionReportPresenter.cs" />
+    <Compile Include="Views\HospitalInventoryTransferPresenter.cs" />
+    <Compile Include="Views\ICustomerPARLevel.cs" />
+    <Compile Include="Views\ICustomerView.cs" />
+    <Compile Include="Views\eParPlusInventoryAmountsPresenter.cs" />
+    <Compile Include="Views\IeParPlusConsumptionRateReport.cs" />
+    <Compile Include="Views\IeParPlusExpirationReport.cs" />
+    <Compile Include="Views\IeParPlusInventoryAmountsReport.cs" />
+    <Compile Include="Views\IeParPlusLowInventoryReport.cs" />
+    <Compile Include="Views\IeParPlusManualConsumption.cs" />
+    <Compile Include="Views\IeParPlusNotificationSetup.cs" />
+    <Compile Include="Views\IeParPlusOffCartRateReport.cs" />
+    <Compile Include="Views\IeParPlusShipAndBillReport.cs" />
+    <Compile Include="Views\IeParPlusTransactionReport.cs" />
+    <Compile Include="Views\IHospitalInventoryTransfer.cs" />
+    <Compile Include="Views\IKitHistoryView.cs" />
+    <Compile Include="Views\IProductLinePartDetail.cs" />
+    <Compile Include="Views\IeParPlusReaderDashboard.cs" />
+    <Compile Include="Views\IeParPlusReaderDetailView.cs" />
+    <Compile Include="Views\ITagHistoryView.cs" />
+    <Compile Include="Views\KitHistoryPresenter.cs" />
+    <Compile Include="Views\IDefaultSalesPersonView.cs" />
+    <Compile Include="MasterPages\ISite1View.cs" />
+    <Compile Include="MasterPages\Site1Presenter.cs" />
+    <Compile Include="ShellModuleInitializer.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Views\AgingOrdersPresenter.cs" />
+    <Compile Include="Views\DefaultSalesPersonPresenter.cs" />
+    <Compile Include="Views\IInventoryTransferView.cs" />
+    <Compile Include="Views\InventoryTransferPresenter.cs" />
+    <Compile Include="Views\IReturnInventoryRMAView.cs" />
+    <Compile Include="Views\IVirtualReCheckInView.cs" />
+    <Compile Include="Views\PartDetailPresenter.cs" />
+    <Compile Include="Views\IPartDetailView.cs" />
+    <Compile Include="Views\KitDetailPresenter.cs" />
+    <Compile Include="Views\IKitDetailView.cs" />
+    <Compile Include="Views\IAgingOrdersView.cs" />
+    <Compile Include="Views\IViewCancelTransactionView.cs" />
+    <Compile Include="Views\IVirtualCheckInView.cs" />
+    <Compile Include="Views\IVirtualCheckOutView.cs" />
+    <Compile Include="Views\NewProductTransferPresenter.cs" />
+    <Compile Include="Views\CasePresenter.cs" />
+    <Compile Include="Views\CaseSchedulePresenter.cs" />
+    <Compile Include="Views\ChangePasswordPresenter.cs" />
+    <Compile Include="Views\ConfigurationSettingPresenter.cs" />
+    <Compile Include="Views\ContactPresenter.cs" />
+    <Compile Include="Views\CaseFindMatchPresenter.cs" />
+    <Compile Include="Views\INewProductTransfer.cs" />
+    <Compile Include="Views\IVirtualBuildKitView.cs" />
+    <Compile Include="Views\ProductLinePartDetailPresenter.cs" />
+    <Compile Include="Views\eParPlusReaderDetailPresenter.cs" />
+    <Compile Include="Views\ReplenishmentTransferPresenter.cs" />
+    <Compile Include="Views\IReplenishmentTransferView.cs" />
+    <Compile Include="Views\PARLevelPresenter.cs" />
+    <Compile Include="Views\IPARLevelView.cs" />
+    <Compile Include="Views\ICaseFindMatchView.cs" />
+    <Compile Include="Views\ICaseScheduleView.cs" />
+    <Compile Include="Views\ICaseView.cs" />
+    <Compile Include="Views\IInventoryAssignmentView.cs" />
+    <Compile Include="Views\IKitFamilyView.cs" />
+    <Compile Include="Views\IKitListingView.cs" />
+    <Compile Include="Views\InventoryAssignmentPresenter.cs" />
+    <Compile Include="Views\KitFamilyPresenter.cs" />
+    <Compile Include="Views\DefaultInventoryManagerPresenter.cs" />
+    <Compile Include="Views\ForgotPasswordPresenter.cs" />
+    <Compile Include="Views\IChangePasswordView.cs" />
+    <Compile Include="Views\IConfigurationSettingView.cs" />
+    <Compile Include="Views\IContactView.cs" />
+    <Compile Include="Views\IDefaultInventoryManagerView.cs" />
+    <Compile Include="Views\IForgotPasswordView.cs" />
+    <Compile Include="Views\ILocateKitView.cs" />
+    <Compile Include="Views\ILoginView.cs" />
+    <Compile Include="Views\INewScenarioView.cs" />
+    <Compile Include="Views\IPartyLocationView.cs" />
+    <Compile Include="Views\IPartyView.cs" />
+    <Compile Include="Views\IRoleView.cs" />
+    <Compile Include="Views\ISalesOfficeLocationView.cs" />
+    <Compile Include="Views\ISalesOfficeRequestView.cs" />
+    <Compile Include="Views\IFindMatchView.cs" />
+    <Compile Include="Views\IScenarioOrderView.cs" />
+    <Compile Include="Views\IScenarioView.cs" />
+    <Compile Include="Views\ISchedulerView.cs" />
+    <Compile Include="Views\ISelectKitView.cs" />
+    <Compile Include="Views\ISelectScenarioView.cs" />
+    <Compile Include="Views\IUserView.cs" />
+    <Compile Include="Views\KitListingPresenter.cs" />
+    <Compile Include="Views\LocateKitPresenter.cs" />
+    <Compile Include="Views\LoginPresenter.cs" />
+    <Compile Include="Views\NewScenarioPresenter.cs" />
+    <Compile Include="Views\PartyLocationPresenter.cs" />
+    <Compile Include="Views\PartyPresenter.cs" />
+    <Compile Include="Views\ReturnInventoryRMAPresenter.cs" />
+    <Compile Include="Views\RolePresenter.cs" />
+    <Compile Include="Views\SalesOfficeLocationPresenter.cs" />
+    <Compile Include="Views\SalesOfficeRequestPresenter.cs" />
+    <Compile Include="Views\FindMatchPresenter.cs" />
+    <Compile Include="Views\ScenarioOrderPresenter.cs" />
+    <Compile Include="Views\ScenarioPresenter.cs" />
+    <Compile Include="Views\SchedulerPresenter.cs" />
+    <Compile Include="Views\SelectKitPresenter.cs" />
+    <Compile Include="Views\SelectScenarioPresenter.cs" />
+    <Compile Include="Views\TagHistoryPresenter.cs" />
+    <Compile Include="Views\UserPresenter.cs" />
+    <Compile Include="Views\ViewCancelTransactionPresenter.cs" />
+    <Compile Include="Views\VirtualBuildKitPresenter.cs" />
+    <Compile Include="Views\VirtualCheckInPresenter.cs" />
+    <Compile Include="Views\VirtualCheckOutPresenter.cs" />
+    <Compile Include="Views\VirtualReCheckInPresenter.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <BootstrapperPackage Include="Microsoft.Net.Client.3.5">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1 Client Profile</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5.SP1">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Windows.Installer.3.1">
+      <Visible>False</Visible>
+      <ProductName>Windows Installer 3.1</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\..\Library\VCTWeb.Core.Domain\VCTWeb.Core.Domain.csproj">
+      <Project>{47e03be3-6451-4c8d-ad73-cedf5caf43c2}</Project>
+      <Name>VCTWeb.Core.Domain</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+  <ProjectExtensions>
+    <VisualStudio>
+      <UserProperties IsModuleProject="True" />
+    </VisualStudio>
+  </ProjectExtensions>
+</Project>

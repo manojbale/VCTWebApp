@@ -1,0 +1,206 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>8.0.30703</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{47E03BE3-6451-4C8D-AD73-CEDF5CAF43C2}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>VCTWeb.Core.Domain</RootNamespace>
+    <AssemblyName>VCTWeb.Core.Domain</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <TargetFrameworkProfile />
+    <SccProjectName>SAK</SccProjectName>
+    <SccLocalPath>SAK</SccLocalPath>
+    <SccAuxPath>SAK</SccAuxPath>
+    <SccProvider>SAK</SccProvider>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <AllowUnsafeBlocks>false</AllowUnsafeBlocks>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="log4net, Version=1.2.10.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=x86">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\Lib\log4net.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Practices.EnterpriseLibrary.Common, Version=4.1.0.0, Culture=neutral, PublicKeyToken=e44a2bc38ed2c13c, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\Microsoft.Practices.EnterpriseLibrary.Common.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Practices.EnterpriseLibrary.Data, Version=4.1.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\Lib\Microsoft.Practices.EnterpriseLibrary.Data.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Practices.EnterpriseLibrary.Validation, Version=4.1.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\Lib\Microsoft.Practices.EnterpriseLibrary.Validation.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.configuration" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.DirectoryServices" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Address.cs" />
+    <Compile Include="Authentication.cs" />
+    <Compile Include="AuthenticationRepository.cs" />
+    <Compile Include="BadgeNumberValidator.cs" />
+    <Compile Include="BadgeNumberValidatorAttribute.cs" />
+    <Compile Include="BaseEntityClass.cs" />
+    <Compile Include="BOM.cs" />
+    <Compile Include="BOMRepository.cs" />
+    <Compile Include="CasePartDetail.cs" />
+    <Compile Include="Cases.cs" />
+    <Compile Include="CaseRepository.cs" />
+    <Compile Include="CaseStatusDetail.cs" />
+    <Compile Include="CaseStatusDetailRepository.cs" />
+    <Compile Include="ConfigSetting.cs" />
+    <Compile Include="Configuration.cs" />
+    <Compile Include="ConfigurationRepository.cs" />
+    <Compile Include="Constants.cs" />
+    <Compile Include="AddressRepository.cs" />
+    <Compile Include="Contact.cs" />
+    <Compile Include="ContactRepository.cs" />
+    <Compile Include="Customer.cs" />
+    <Compile Include="CustomerPARLevel.cs" />
+    <Compile Include="CustomerPARLevelRepository.cs" />
+    <Compile Include="CustomerProductLine.cs" />
+    <Compile Include="CustomerRepository.cs" />
+    <Compile Include="CustomerShelf.cs" />
+    <Compile Include="CustomerShelfAntenna.cs" />
+    <Compile Include="CustomerShelfAntennaProperty.cs" />
+    <Compile Include="CustomerShelfProperty.cs" />
+    <Compile Include="CustomerShelfRepository.cs" />
+    <Compile Include="CustomerUser.cs" />
+    <Compile Include="eParPlus.cs" />
+    <Compile Include="eParPlusRepository.cs" />
+    <Compile Include="ManualConsumption.cs" />
+    <Compile Include="ManualConsumptionRepository.cs" />
+    <Compile Include="MD5CryptorEngine.cs" />
+    <Compile Include="Notification.cs" />
+    <Compile Include="NotificationDetail.cs" />
+    <Compile Include="NotificationDetailRepository.cs" />
+    <Compile Include="NotificationRepository.cs" />
+    <Compile Include="OrderAdjustment.cs" />
+    <Compile Include="OrderAdjustmentRepository.cs" />
+    <Compile Include="OrderDetail.cs" />
+    <Compile Include="OrderDetailRepository.cs" />
+    <Compile Include="PartyCycleCount.cs" />
+    <Compile Include="LocationPartDetail.cs" />
+    <Compile Include="KitFamilyLocations.cs" />
+    <Compile Include="KitFamilyLocationsRepository.cs" />
+    <Compile Include="KitFamilyParts.cs" />
+    <Compile Include="KitItem.cs" />
+    <Compile Include="ProductLine.cs" />
+    <Compile Include="ProductLinePartDetail.cs" />
+    <Compile Include="ProductLinePartDetailRepository.cs" />
+    <Compile Include="ProductLineRepository.cs" />
+    <Compile Include="ReplenishmentTransfer.cs" />
+    <Compile Include="PARLevelRepository.cs" />
+    <Compile Include="PartyPARLevel.cs" />
+    <Compile Include="LocationPARLevel.cs" />
+    <Compile Include="InventoryStock.cs" />
+    <Compile Include="StockLevel.cs" />
+    <Compile Include="KitFamilyRepository.cs" />
+    <Compile Include="KitFamily.cs" />
+    <Compile Include="Country.cs" />
+    <Compile Include="CountryRepository.cs" />
+    <Compile Include="CustomValidators\NonEmptyStateValidator.cs" />
+    <Compile Include="CustomValidators\NonEmptyStateValidatorAttribute.cs" />
+    <Compile Include="CustomValidators\ZipCodeValidator.cs" />
+    <Compile Include="CustomValidators\ZipCodeValidatorAttribute.cs" />
+    <Compile Include="LocationTypeRepository.cs" />
+    <Compile Include="PartyLocation.cs" />
+    <Compile Include="PartyLocationRepository.cs" />
+    <Compile Include="SearchResultRepository.cs" />
+    <Compile Include="LotMasterRepository.cs" />
+    <Compile Include="CustomValidators\RequiredStringValidator.cs" />
+    <Compile Include="CustomValidators\RequiredStringValidatorAttribute.cs" />
+    <Compile Include="DbHelper.cs" />
+    <Compile Include="Dictionary.cs" />
+    <Compile Include="DictionaryRepository.cs" />
+    <Compile Include="EmailSender.cs" />
+    <Compile Include="Encryption.cs" />
+    <Compile Include="Helper.cs" />
+    <Compile Include="ImpliedPermission.cs" />
+    <Compile Include="ImpliedPermissionRepository.cs" />
+    <Compile Include="KitListing.cs" />
+    <Compile Include="KitTable.cs" />
+    <Compile Include="KitTableRepository.cs" />
+    <Compile Include="KitDocuments.cs" />
+    <Compile Include="KitDocumentsRepository.cs" />
+    <Compile Include="KitListingRepository.cs" />
+    <Compile Include="KitRequest.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Location.cs" />
+    <Compile Include="LocationContacts.cs" />
+    <Compile Include="LocationRepository.cs" />
+    <Compile Include="LocationType.cs" />
+    <Compile Include="LotMaster.cs" />
+    <Compile Include="Party.cs" />
+    <Compile Include="PartyLocationRole.cs" />
+    <Compile Include="PartyRepository.cs" />
+    <Compile Include="PartyType.cs" />
+    <Compile Include="Permission.cs" />
+    <Compile Include="PermissionEntity.cs" />
+    <Compile Include="PermissionRepository.cs" />
+    <Compile Include="Procedures.cs" />
+    <Compile Include="ProceduresRepository.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Request.cs" />
+    <Compile Include="RequestDetail.cs" />
+    <Compile Include="RequestDetailRepository.cs" />
+    <Compile Include="RequestRepository.cs" />
+    <Compile Include="RequestTransaction.cs" />
+    <Compile Include="RequestTransactionRepository.cs" />
+    <Compile Include="Role.cs" />
+    <Compile Include="RoleMembership.cs" />
+    <Compile Include="RolePermission.cs" />
+    <Compile Include="RolePermissionRepository.cs" />
+    <Compile Include="RoleRepository.cs" />
+    <Compile Include="SafeDataReader.cs" />
+    <Compile Include="SaltedHash.cs" />
+    <Compile Include="SearchResult.cs" />
+    <Compile Include="State.cs" />
+    <Compile Include="StateRepository.cs" />
+    <Compile Include="TestKL.cs" />
+    <Compile Include="TestKLRepository.cs" />
+    <Compile Include="Users.cs" />
+    <Compile Include="UserRepository.cs" />
+    <Compile Include="Asset.cs" />
+    <Compile Include="AssetRepository.cs" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

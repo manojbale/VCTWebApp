@@ -1,0 +1,159 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="Site1.master.cs" Inherits="VCTWebApp.Shell.MasterPages.Site1" %>
+
+<%@ Register Assembly="AjaxControlToolkit" Namespace="AjaxControlToolkit" TagPrefix="ajaxtk" %>
+<%@ Register Src="~/Controls/MenuNavigation.ascx" TagName="MenuNavigation" TagPrefix="uc1" %>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head id="Head1" runat="server">
+    <meta http-equiv="X-UA-Compatible" content="IE=8" />
+    <title>Inventory Tower System</title>
+    <asp:ContentPlaceHolder ID="head" runat="server">
+    </asp:ContentPlaceHolder>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" type="text/css" href="Scripts/jquery-ui.css" />
+    <link rel="stylesheet" type="text/css" href="js/jquery.jscrollpane.css" media="all" />
+    <link rel="stylesheet" type="text/css" href="Style/VCTWeb.css" />
+    <script src="js/VCTAutoComplete.js" type="text/javascript"></script>
+    <script src="js/jquery-1.9.1.min.js" type="text/javascript"></script>
+    <script src="js/ui/jquery-ui-1.10.2.custom.min.js" type="text/javascript"></script>
+    <script src="js/ui/jquery.ui.autocomplete.js" type="text/javascript"></script>
+    <script src="js/jquery.mousewheel.js" type="text/javascript"></script>
+    <script src="js/jquery.contentcarousel.js" type="text/javascript"></script>    
+    <script src="js/browserHeight.js" type="text/javascript"></script>
+    <script src="js/Common.js" type="text/javascript"></script>
+    <script src="js/datepicker.js" type="text/javascript"></script>
+    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCQI4FVP0mjvsxydQJIgyhJdPWDfF-3UJM&sensor=true"
+        type="text/javascript"></script>   
+     <script src="js/grid.js" type="text/javascript"></script>
+    <script type="text/javascript">
+        $ = $.noConflict();
+        $(function () {
+            $(window).load(function () {
+                $('#mnuNavigation, #content123').css('display', 'block');
+            });
+        })
+    </script>
+</head>
+<body>    
+    <form id="mainForm" runat="server">
+    <asp:ScriptManager ID="DefaultMasterScriptManager" runat="server" EnablePageMethods="true"
+        EnablePartialRendering="true" EnableScriptGlobalization="true">
+    </asp:ScriptManager>
+    <div id="wrapper">
+        <table width="100%" cellpadding="0" cellspacing="0">
+            <tr>
+                <td>
+                    <div id="header">
+                        <div class="header">
+                            <div style="float:left; padding:20px 10px;">
+                                <h2>
+                                    <a href="Default.aspx" style="color:#114c90;font-size:x-large">Inventory Tower System</a>
+                                </h2>
+                            </div>
+                            <span class="right_ab">
+                                <asp:Label ID="lblUser" runat="server" CssClass="header-label"></asp:Label>
+                                <%--<asp:Label ID="lblUserName" CssClass="labelbold" runat="server" Font-Bold="true" ForeColor="#fff" Font-Size="10px"></asp:Label>--%>
+                                <asp:HyperLink ID="hplChangePassowrd" Text="Change Password" CssClass="header-label"  NavigateUrl="~/ChangePassword.aspx"
+                                    Visible="false" runat="server"></asp:HyperLink>
+                                <asp:LinkButton ID="lnkLogout" runat="server" CausesValidation="false" Text="Logout"
+                                    OnClick="lnkLogout_Click" Visible="False"></asp:LinkButton>
+                            </span>
+                        </div>
+                    </div>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <div id="mnuNavigation" style="display:none;">
+                        <uc1:MenuNavigation ID="ucMenuNavigation" runat="server" />
+                    </div>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <div id="content123" style="display:none;">
+                        <asp:ContentPlaceHolder ID="DefaultContent" runat="server">
+                        </asp:ContentPlaceHolder>
+                    </div>
+                </td>
+            </tr>
+        </table>
+        <div id="footer" style="display: block">
+            <asp:Label ID="lblToYear" runat="server"></asp:Label>&nbsp;Powered by Iris Software, Inc. SnR Inventory Tower System.&nbsp; Fields marked with asterisk are necessary.&nbsp;
+            <asp:Label ID="lblVersion" runat="server"></asp:Label>&nbsp;&nbsp;
+        </div>
+    </div>
+    <asp:SiteMapDataSource ID="ApplicationSiteMap" runat="server" SiteMapProvider="DefaultSiteMapProvider"
+        ShowStartingNode="False" />
+    <asp:UpdateProgress ID="UpdatePnlProgress2" runat="server" DynamicLayout="false"
+        DisplayAfter="0">
+        <ProgressTemplate>
+            <div style="position: absolute; z-index: 10001; left: expression((this.offsetParent.clientWidth/2)-(this.clientWidth/2)+this.offsetParent.scrollLeft);
+                top: expression((this.offsetParent.clientHeight/2)-(this.clientHeight/2)+this.offsetParent.scrollTop);">
+                <img src="Images/ajax-loader.gif" />
+            </div>
+        </ProgressTemplate>
+    </asp:UpdateProgress>
+    
+    <ajaxTK:ModalPopupExtender ID="modalPopup" runat="server" ClientIDMode="Static" TargetControlID="UpdatePnlProgress2"
+        PopupControlID="UpdatePnlProgress2" BackgroundCssClass="modalPopup" />
+    </form>
+    
+
+    <style> html{display : none ; } </style>    <%--This is to prevent Click Jacking--%>
+    <script type="text/javascript">
+        <%--This is to prevent Click Jacking--%>
+        if (self == top) {
+            document.documentElement.style.display = 'block';
+        } else {
+            top.location = self.location;
+        }
+
+        $(function () {
+            var filename = getFileNameFromURL();
+            if (filename != 'login' || filename != 'Login') {
+                $('<span>|</span>').insertBefore('#hplChangePassowrd');
+                $('<span>|</span>').insertBefore('#lnkLogout');
+            }
+        });
+
+        var prm = Sys.WebForms.PageRequestManager.getInstance();
+        //Raised before processing of an asynchronous postback starts and the postback request is sent to the server.
+        prm.add_beginRequest(BeginRequestHandler);
+        // Raised after an asynchronous postback is finished and control has been returned to the browser.
+        prm.add_endRequest(EndRequestHandler);
+        function BeginRequestHandler(sender, args) {
+            //Shows the modal popup - the update progress
+            var popup = $find('modalPopup');
+            if (popup != null) {
+                popup.show();
+            }
+        }
+
+        function EndRequestHandler(sender, args) {
+            //Hide the modal popup - the update progress
+            var popup = $find('modalPopup');
+            if (popup != null) {
+                popup.hide();
+            }
+        }
+
+        $(document).keydown(function (e) {
+            var code = (e.keyCode ? e.keyCode : e.which);
+            if (code === 13) {                
+                e.preventDefault();
+                return false;
+            }
+        });
+
+        
+        $(document).keydown(function (e) {
+            var valid = $(document.activeElement).is('input[type="text"]:focus, textarea:focus,input[type="password"]:focus');
+            if (e.keyCode === 8 && !valid) {
+                return false;
+            }
+        });
+    
+    </script>
+</body>
+</html>

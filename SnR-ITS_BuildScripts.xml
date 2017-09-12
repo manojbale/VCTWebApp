@@ -1,0 +1,108 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Project xmlns="http://schemas.microsoft.com/developer/msbuild/2003" DefaultTargets="Run">
+
+  <PropertyGroup>
+    <VisualStudioVersion Condition=" '$(VisualStudioVersion)'=='' ">12.0</VisualStudioVersion>
+    <Configuration Condition=" '$(Configuration)'=='' ">Release</Configuration>
+    <!-- Location for build output of the project -->
+    <OutputRoot Condition=" '$(OutputRoot)'=='' ">$(MSBuildThisFileDirectory)..\Deployment\Staging\FeeBilling\FeeLinkReportsTemp\</OutputRoot>
+    <CompilationDebug>false</CompilationDebug>
+    <SolutionPath>...\FeeLinkReports</SolutionPath>
+    <ApplicationPublishFolder>$(MSBuildThisFileDirectory)..\Deployment\Installable\FeeBilling\FeeLinkReports</ApplicationPublishFolder>
+  </PropertyGroup>
+
+  <Target Name="Run">
+    <CallTarget Targets="Clean" />
+    <CallTarget Targets="StartBuildFeeLinkReports"/>
+    <CallTarget Targets="StartCompileAndCopy"/>
+    <CallTarget Targets="StartPublish"/>
+  </Target>
+
+  <Target Name="Clean">
+    <ItemGroup>
+      <RemoveDir1 Include="$(MSBuildThisFileDirectory)..\Deployment\Staging" />
+      <RemoveDir1 Include="$(MSBuildThisFileDirectory)..\Deployment\Installable\FeeBilling" /> 
+    </ItemGroup>
+    <RemoveDir Directories="@(RemoveDir1)" ContinueOnError="true" />
+  </Target>
+
+  <Target Name="StartBuildFeeLinkReports">
+    <CallTarget Targets="CompileFrameWork" />
+    <CallTarget Targets="CopyFrameworkFilesToLib" />
+  </Target>
+
+  <Target Name="StartCompileAndCopy">
+    <CallTarget Targets="CompileService" />
+    <CallTarget Targets="CopyServiceFilesToLib" />
+    <CallTarget Targets="CompileApplication" />
+  </Target>
+
+  <Target Name="StartPublish">
+    <CallTarget Targets="CopyInstall" />
+    <CallTarget Targets="PublishApp" />
+  </Target>
+
+  
+
+
+  <Target Name="CompileFrameWork">
+    <MSBuild Projects="$(SolutionPath)\Framework\SpicaFramework.sln" Properties="Configuration=Release;DebugType=None;" Targets="Clean;Rebuild" />
+  </Target>
+
+  <Target Name="CopyFrameworkFilesToLib">
+    <CreateItem Include="$(SolutionPath)\Framework\**\Release\*.dll">
+      <Output TaskParameter="Include" ItemName="FilesToCopy3"/>
+    </CreateItem>
+    <Copy	SourceFiles="@(FilesToCopy3)" DestinationFolder="$(SolutionPath)\lib"/>
+  </Target>
+
+  <Target Name="CompileService">
+    <MSBuild Projects="$(SolutionPath)\WebServices\SecurityClassificationWebService.sln" Properties="Configuration=Release;DebugType=None;" Targets="Clean;Rebuild" />
+  </Target>
+
+  <Target Name="CopyServiceFilesToLib">
+    <CreateItem Include="$(SolutionPath)\WebServices\**\Release\*.Model.dll">
+      <Output TaskParameter="Include" ItemName="FilesToCopy4"/>
+    </CreateItem>
+    <Copy	SourceFiles="@(FilesToCopy4)" DestinationFolder="$(SolutionPath)\lib"/>
+  </Target>
+
+
+  <Target Name="CompileApplication">
+    <MSBuild Projects="$(SolutionPath)\Application\SecurityClassification.sln" Properties="Configuration=Release;DebugType=None;" Targets="Clean;Rebuild" />
+  </Target>
+
+
+  <Target Name="PublishApp" DependsOnTargets ="CopyInstall">
+    <MSBuild Projects="@(ProjectsToBuild)" Properties="Configuration=Release;DebugType=None;" Targets="Clean;Rebuild" />
+  </Target>
+
+  <Target Name="CopyInstall" >
+
+    <CreateItem Include=".\Install\*.*;" Exclude=".\Install\**\*.sig;">
+      <Output TaskParameter="Include" ItemName="FilesToCopy1"/>
+    </CreateItem>
+
+    <Copy	SourceFiles="@(FilesToCopy1)" DestinationFiles="$(MSBuildThisFileDirectory)..\Deployment\Installable\Install\%(RecursiveDir)%(Filename)%(Extension)"/>
+    <Copy	SourceFiles="@(FilesToCopy2)" DestinationFiles="$(MSBuildThisFileDirectory)..\Deployment\Installable\Install\Scripts\%(RecursiveDir)%(Filename)%(Extension)"/>
+    <Copy	SourceFiles="@(FilesToCopy5)" DestinationFiles="$(MSBuildThisFileDirectory)..\Deployment\Installable\FeeBilling\Configuration_Files\%(RecursiveDir)%(Filename)%(Extension)"/>
+    <Copy	SourceFiles="@(FilesToCopy6)" DestinationFiles="$(MSBuildThisFileDirectory)..\Deployment\Installable\FeeBilling\BatchJobs\%(RecursiveDir)%(Filename)%(Extension)"/>
+    <Copy	SourceFiles="@(FilesToCopy7)" DestinationFiles="$(MSBuildThisFileDirectory)..\Deployment\Installable\FeeBilling\healthcheck\%(RecursiveDir)%(Filename)%(Extension)"/>
+    <Copy	SourceFiles="@(FilesToCopy8)" DestinationFiles="$(MSBuildThisFileDirectory)..\Deployment\Installable\FeeBilling\JCL\%(RecursiveDir)%(Filename)%(Extension)"/>
+  </Target>
+
+  <ItemGroup>
+    <ProjectsToBuild Include="$(MSBuildThisFileDirectory)..\SourceCode\Application\RBC.CWMT.SPiCA.SecurityClassification\RBC.CWMT.SPiCA.SecurityClassification.csproj">
+      <AdditionalProperties>
+        VisualStudioVersion=$(VisualStudioVersion);
+        Configuration=$(Configuration);
+        OutputPath=$(OutputRoot);
+        WebPublishMethod=FileSystem;
+        publishUrl=$(ApplicationPublishFolder);
+        DeployOnBuild=true;
+        DeployTarget=WebPublish;
+      </AdditionalProperties>
+    </ProjectsToBuild>
+
+  </ItemGroup>
+</Project>

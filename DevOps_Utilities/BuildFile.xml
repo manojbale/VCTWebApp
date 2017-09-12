@@ -1,0 +1,107 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Project xmlns="http://schemas.microsoft.com/developer/msbuild/2003" DefaultTargets="Run">
+
+  <PropertyGroup>
+    <VisualStudioVersion Condition=" '$(VisualStudioVersion)'=='' ">12.0</VisualStudioVersion>
+    <Configuration Condition=" '$(Configuration)'=='' ">Release</Configuration>
+
+    <!-- Location for build output of the project -->
+    <OutputRoot Condition=" '$(OutputRoot)'=='' ">$(MSBuildThisFileDirectory)..\WebSites\VCTWebApp\</OutputRoot>
+    <CompilationDebug>false</CompilationDebug>
+    <SolutionPath>..\WebSites\VCTWebApp</SolutionPath>
+    <ApplicationPublishFolder>$(MSBuildThisFileDirectory)Deployment\Installable\VCTWebApp</ApplicationPublishFolder>
+  </PropertyGroup>
+
+  <Target Name="Run">
+    <CallTarget Targets="Clean" />
+    <!--    <CallTarget Targets="StartBuildFeeLinkReports"/> -->
+    <CallTarget Targets="StartCompileAndCopy"/>
+    <!-- <CallTarget Targets="StartPublish"/> -->
+  </Target>
+
+  <Target Name="Clean">
+    <ItemGroup>
+      <!-- <RemoveDir1 Include="$(MSBuildThisFileDirectory)..\Deployment\Installable" /> -->
+      <RemoveDir1 Include="$(MSBuildThisFileDirectory)Deployment\Installable\VCTWebApp" />
+    </ItemGroup>
+    <RemoveDir Directories="@(RemoveDir1)" ContinueOnError="true" />
+  </Target>
+
+  <!--  <Target Name="StartBuildFeeLinkReports">
+    <CallTarget Targets="CompileFrameWork" />
+    <CallTarget Targets="CopyFrameworkFilesToLib" />
+  </Target> -->
+
+  <Target Name="StartCompileAndCopy">
+    <!--   <CallTarget Targets="CompileService" />
+    <CallTarget Targets="CopyServiceFilesToLib" /> -->
+    <CallTarget Targets="CompileApplication" />
+
+  </Target>
+
+  <!-- <Target Name="StartPublish">
+    <CallTarget Targets="CopyInstall" />
+    <CallTarget Targets="PublishApp" />
+  </Target> -->
+
+
+
+  <!--  <Target Name="CompileFrameWork">
+    <MSBuild Projects="$(SolutionPath)\FeeLinkReports.sln" Properties="Configuration=Release;DebugType=None;" Targets="Clean;Rebuild" />
+  </Target>
+
+  <Target Name="CopyFrameworkFilesToLib">
+    <CreateItem Include="$(SolutionPath)\bin\*.dll">
+      <Output TaskParameter="Include" ItemName="FilesToCopy3"/>
+    </CreateItem>
+    <Copy SourceFiles="@(FilesToCopy3)" DestinationFolder="$(SolutionPath)\lib"/>
+  </Target>
+-->
+
+  <!--  <Target Name="CompileService">
+    <MSBuild Projects="$(SolutionPath)\WebServices\SecurityClassificationWebService.sln" Properties="Configuration=Release;DebugType=None;" Targets="Clean;Rebuild" />
+  </Target>
+-->
+
+  <!--  <Target Name="CopyServiceFilesToLib">
+    <CreateItem Include="$(SolutionPath)\WebServices\**\Release\*.Model.dll">
+      <Output TaskParameter="Include" ItemName="FilesToCopy4"/>
+    </CreateItem>
+    <Copy SourceFiles="@(FilesToCopy4)" DestinationFolder="$(SolutionPath)\lib"/>
+  </Target>
+-->
+
+  <Target Name="CompileApplication">
+    <MSBuild Projects="$(SolutionPath)\VCTWebApp.csproj" Properties="Configuration=Release;DebugType=None;" Targets="Clean;Rebuild" />
+  </Target>
+
+
+ <!--  <Target Name="PublishApp" DependsOnTargets ="CopyInstall">
+    <MSBuild Projects="@(ProjectsToBuild)" Properties="Configuration=Release;DebugType=None;" Targets="Clean;Rebuild" />
+  </Target>
+
+  <Target Name="CopyInstall" >
+
+    <CreateItem Include="$(MSBuildThisFileDirectory)..\WebSites\VCTWebApp\*.*;" Exclude="$(MSBuildThisFileDirectory)..\WebSites\VCTWebApp\*.cs;$(MSBuildThisFileDirectory)..\WebSites\VCTWebApp\*.sln">
+      <Output TaskParameter="Include" ItemName="FilesToCopy1"/>
+    </CreateItem>
+
+    <Copy SourceFiles="@(FilesToCopy1)" DestinationFiles="$(MSBuildThisFileDirectory)Deployment\Installable\VCTWebApp\%(RecursiveDir)%(Filename)%(Extension)"/>
+    
+  </Target> -->
+
+  <ItemGroup>
+    <ProjectsToBuild Include="$(MSBuildThisFileDirectory)..\WebSites\VCTWebApp\VCTWebApp.csproj">
+      <AdditionalProperties>
+        VisualStudioVersion=$(VisualStudioVersion);
+        Configuration=$(Configuration);
+        OutputPath=$(OutputRoot);
+        WebPublishMethod=FileSystem;
+        publishUrl=$(ApplicationPublishFolder);
+        DeployOnBuild=true;
+        DeployTarget=WebPublish;
+      </AdditionalProperties>
+    </ProjectsToBuild>
+
+  </ItemGroup>
+</Project>

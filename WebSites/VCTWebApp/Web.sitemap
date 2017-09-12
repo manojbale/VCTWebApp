@@ -1,0 +1,10 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<siteMap xmlns="http://schemas.microsoft.com/AspNet/SiteMap-File-1.0" >
+  <siteMapNode url="" title="Configuration"  description="Configuration">
+    <siteMapNode url="" title="Authorization"  description="Authorization">
+      <siteMapNode url="~/Role.aspx" title="Role"  description="Role" />
+      <siteMapNode url="~/User.aspx" title="User"  description="User" />
+      <siteMapNode url="~/ConfigurationSetting.aspx" title="ConfigurationSetting"  description="Configuration Settings" />
+    </siteMapNode>
+  </siteMapNode>
+</siteMap>

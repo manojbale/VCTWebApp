@@ -1,0 +1,95 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xs:schema id="DataSet1" targetNamespace="http://tempuri.org/DataSet1.xsd" xmlns:mstns="http://tempuri.org/DataSet1.xsd" xmlns="http://tempuri.org/DataSet1.xsd" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" xmlns:msprop="urn:schemas-microsoft-com:xml-msprop" attributeFormDefault="qualified" elementFormDefault="qualified">
+  <xs:annotation>
+    <xs:appinfo source="urn:schemas-microsoft-com:xml-msdatasource">
+      <DataSource DefaultConnectionIndex="0" FunctionsComponentName="QueriesTableAdapter" GeneratorFunctionsComponentClassName="QueriesTableAdapter" Modifier="AutoLayout, AnsiClass, Class, Public" SchemaSerializationMode="IncludeSchema" UserFunctionsComponentName="QueriesTableAdapter" xmlns="urn:schemas-microsoft-com:xml-msdatasource">
+        <Connections>
+          <Connection ConnectionStringObject="Data Source=172.16.10.204;Initial Catalog=VCT_New_SN;Integrated Security=True" IsAppSettingsProperty="false" Modifier="Assembly" Name="iris-csg-244.VCT_New_SN.dbo" ParameterPrefix="@" Provider="System.Data.SqlClient" />
+        </Connections>
+        <Tables />
+        <Sources />
+      </DataSource>
+    </xs:appinfo>
+  </xs:annotation>
+  <xs:element name="DataSet1" msdata:IsDataSet="true" msdata:UseCurrentLocale="true" msprop:EnableTableAdapterManager="true" msprop:Generator_DataSetName="DataSet1" msprop:Generator_UserDSName="DataSet1">
+    <xs:complexType>
+      <xs:choice minOccurs="0" maxOccurs="unbounded">
+        <xs:element name="gjgj" msprop:Generator_TableClassName="gjgjDataTable" msprop:Generator_TableVarName="tablegjgj" msprop:Generator_TablePropName="gjgj" msprop:Generator_RowDeletingName="gjgjRowDeleting" msprop:Generator_UserTableName="gjgj" msprop:Generator_RowChangingName="gjgjRowChanging" msprop:Generator_RowEvHandlerName="gjgjRowChangeEventHandler" msprop:Generator_RowDeletedName="gjgjRowDeleted" msprop:Generator_RowEvArgName="gjgjRowChangeEvent" msprop:Generator_RowChangedName="gjgjRowChanged" msprop:Generator_RowClassName="gjgjRow">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="CaseNumber" msprop:Generator_ColumnVarNameInTable="columnCaseNumber" msprop:Generator_ColumnPropNameInRow="CaseNumber" msprop:Generator_ColumnPropNameInTable="CaseNumberColumn" msprop:Generator_UserColumnName="CaseNumber">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="10" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="KitNumber" msprop:Generator_ColumnVarNameInTable="columnKitNumber" msprop:Generator_ColumnPropNameInRow="KitNumber" msprop:Generator_ColumnPropNameInTable="KitNumberColumn" msprop:Generator_UserColumnName="KitNumber" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="100" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="KitDescription" msprop:Generator_ColumnVarNameInTable="columnKitDescription" msprop:Generator_ColumnPropNameInRow="KitDescription" msprop:Generator_ColumnPropNameInTable="KitDescriptionColumn" msprop:Generator_UserColumnName="KitDescription" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="100" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="PartNum" msprop:Generator_ColumnVarNameInTable="columnPartNum" msprop:Generator_ColumnPropNameInRow="PartNum" msprop:Generator_ColumnPropNameInTable="PartNumColumn" msprop:Generator_UserColumnName="PartNum" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="LotNum" msprop:Generator_ColumnVarNameInTable="columnLotNum" msprop:Generator_ColumnPropNameInRow="LotNum" msprop:Generator_ColumnPropNameInTable="LotNumColumn" msprop:Generator_UserColumnName="LotNum" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="RequiredOn" msprop:Generator_ColumnVarNameInTable="columnRequiredOn" msprop:Generator_ColumnPropNameInRow="RequiredOn" msprop:Generator_ColumnPropNameInTable="RequiredOnColumn" msprop:Generator_UserColumnName="RequiredOn" type="xs:dateTime" />
+              <xs:element name="FromLocationID" msprop:Generator_ColumnVarNameInTable="columnFromLocationID" msprop:Generator_ColumnPropNameInRow="FromLocationID" msprop:Generator_ColumnPropNameInTable="FromLocationIDColumn" msprop:Generator_UserColumnName="FromLocationID" type="xs:int" />
+              <xs:element name="PartyId" msprop:Generator_ColumnVarNameInTable="columnPartyId" msprop:Generator_ColumnPropNameInRow="PartyId" msprop:Generator_ColumnPropNameInTable="PartyIdColumn" msprop:Generator_UserColumnName="PartyId" type="xs:long" minOccurs="0" />
+              <xs:element name="CaseStatus" msprop:Generator_ColumnVarNameInTable="columnCaseStatus" msprop:Generator_ColumnPropNameInRow="CaseStatus" msprop:Generator_ColumnPropNameInTable="CaseStatusColumn" msprop:Generator_UserColumnName="CaseStatus">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="CaseType" msprop:Generator_ColumnVarNameInTable="columnCaseType" msprop:Generator_ColumnPropNameInRow="CaseType" msprop:Generator_ColumnPropNameInTable="CaseTypeColumn" msprop:Generator_UserColumnName="CaseType">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="UpdatedBy" msprop:Generator_ColumnVarNameInTable="columnUpdatedBy" msprop:Generator_ColumnPropNameInRow="UpdatedBy" msprop:Generator_ColumnPropNameInTable="UpdatedByColumn" msprop:Generator_UserColumnName="UpdatedBy">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="100" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="UpdatedOn" msprop:Generator_ColumnVarNameInTable="columnUpdatedOn" msprop:Generator_ColumnPropNameInRow="UpdatedOn" msprop:Generator_ColumnPropNameInTable="UpdatedOnColumn" msprop:Generator_UserColumnName="UpdatedOn" type="xs:dateTime" />
+              <xs:element name="ExpiryDate" msdata:ReadOnly="true" msprop:Generator_ColumnVarNameInTable="columnExpiryDate" msprop:Generator_ColumnPropNameInRow="ExpiryDate" msprop:Generator_ColumnPropNameInTable="ExpiryDateColumn" msprop:Generator_UserColumnName="ExpiryDate" type="xs:dateTime" minOccurs="0" />
+              <xs:element name="Quantity" msdata:ReadOnly="true" msprop:Generator_ColumnVarNameInTable="columnQuantity" msprop:Generator_ColumnPropNameInRow="Quantity" msprop:Generator_ColumnPropNameInTable="QuantityColumn" msprop:Generator_UserColumnName="Quantity" type="xs:int" minOccurs="0" />
+              <xs:element name="PartDescription" msdata:ReadOnly="true" msprop:Generator_ColumnVarNameInTable="columnPartDescription" msprop:Generator_ColumnPropNameInRow="PartDescription" msprop:Generator_ColumnPropNameInTable="PartDescriptionColumn" msprop:Generator_UserColumnName="PartDescription" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="255" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:choice>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>

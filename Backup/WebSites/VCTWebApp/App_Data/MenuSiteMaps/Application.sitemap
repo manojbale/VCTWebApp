@@ -1,0 +1,75 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<sitemapnode Url="" Title="">
+  <siteMapNode Key="Audit" Url="" Title="Audit" Permission="" ImageUrl="../Images/MenuIcons/audit.png" ResourceKey="mnuAudit">
+    <siteMapNode Key="WebCheckOut" Url="~/VirtualCheckOut.aspx" Title="Web Check Out" Permission="WebCheckOut" ImageUrl="../Images/MenuIcons/web-check-out.png" ResourceKey="mnuWebCheckOut"/>
+    <siteMapNode Key="WebCheckIn" Url="~/VirtualCheckIn.aspx" Title="Web Check In" Permission="WebCheckIn" ImageUrl="../Images/MenuIcons/web-check-in.png" ResourceKey="mnuWebCheckIn"/>
+    <siteMapNode Key="WebReCheckIn" Url="~/VirtualReCheckIn.aspx" Title="Web Check In Adjustment" Permission="WebCheckIn" ImageUrl="../Images/MenuIcons/web-check-adj.png" ResourceKey="mnuWebReCheckIn"/>
+  </siteMapNode>
+  <siteMapNode Key="Transfer" Url="" Title="Transfer" Permission="" ImageUrl="../Images/MenuIcons/transfer.png" ResourceKey="mnuTransfer">
+    <siteMapNode Key="ReplenishmentTransfer" Url="~/ReplenishmentTransfer.aspx" Title="Replenishment Transfer" Permission="ReplenishmentTransfer" ImageUrl="../Images/MenuIcons/repenishment-transfer.png" ResourceKey="mnuReplenishmentTransfer"/>
+    <siteMapNode Key="NewProductTransfer" Url="~/NewProductTransfer.aspx" Title="New Product Transfer" Permission="NewProductTransfer" ImageUrl="../Images/MenuIcons/new-product-transfer.png" ResourceKey="mnuNewProductTransfer"/>
+    <siteMapNode Key="InventoryTransfer" Url="" Title="Inventory Transfer" Permission="" ImageUrl="../Images/MenuIcons/inventory-transfer.png" ResourceKey="mnuInventoryTransfer">
+      <siteMapNode Key="LocationInventoryTransfer" Url="~/InventoryTransfer.aspx" Title="Accross Location" Permission="InventoryTransfer" ImageUrl="../Images/MenuIcons/Across-Location.png" ResourceKey="mnuAcrossLocation"/>
+      <siteMapNode Key="HospitalInventoryTransfer" Url="~/HospitalInventoryTransfer.aspx" Title="Accross Party" Permission="InventoryTransfer" ImageUrl="../Images/MenuIcons/Across-Party.png" ResourceKey="mnuAcrossParty"/>
+    </siteMapNode>
+    <siteMapNode Key="ReturnInventoryRMA" Url="~/ReturnInventoryRMA.aspx" Title="Return Inventory (RMA)" Permission="ReturnInventoryRMA" ImageUrl="../Images/MenuIcons/return-inventory.png" ResourceKey="mnuReturnInventoryRMA"/>
+    <siteMapNode Key="ViewCancelTransaction" Url="~/ViewCancelTransaction.aspx" Title="View / Cancel Transaction" Permission="ViewCancelTransaction" ImageUrl="../Images/MenuIcons/viewcancel-transaction.png" ResourceKey="mnuViewCancelTransaction"/>
+  </siteMapNode>
+  <siteMapNode Key="Kit" Url="" Title="Kit" Permission="" ImageUrl="../Images/MenuIcons/kit.png" ResourceKey="mnuKit">
+    <siteMapNode Key="KitFamily" Url="~/KitFamily.aspx" Title="Kit Famiily" Permission="KitFamily" ImageUrl="../Images/MenuIcons/kit-family.png" ResourceKey="mnuKitFamily"/>
+    <siteMapNode Key="KitListing" Url="~/KitListing.aspx" Title="Kit Listing" Permission="KitListing" ImageUrl="../Images/MenuIcons/kit-listing.png" ResourceKey="mnuKitListing"/>
+    <siteMapNode Key="WebBuildKit" Url="~/VirtualBuildKit.aspx" Title="Web Build Kit" Permission="WebBuildKit" ImageUrl="../Images/MenuIcons/web-build-kit.png" ResourceKey="mnuWebBuildKit"/>
+  </siteMapNode>
+  <siteMapNode Key="Scheduler" Url="~/CaseSchedule.aspx" Title="Scheduler" Permission="Scheduler" ImageUrl="../Images/MenuIcons/schedule.png" ResourceKey="mnuScheduler"/>
+  <sitemapnode Key="Inventory" Url="" Title="Inventory" Permission="" ImageUrl="../Images/MenuIcons/inventory.png" ResourceKey="mnuInventory">
+    <siteMapNode Key="InventoryAssignment" Url="~/InventoryAssignment.aspx" Title="Inventory Assignment" Permission="InventoryAssignment" ImageUrl="../Images/MenuIcons/inventory-assignment.png" ResourceKey="mnuInventoryAssignment"/>
+    <siteMapNode Key="InventoryStock" Url="" Title="Stock Level" Permission="" ImageUrl="../Images/MenuIcons/stock-level.png" ResourceKey="mnuStockLevel">
+      <siteMapNode Key="InventoryStockKits" Url="~/StockLevelKits.aspx" Title="Kits" Permission="InventoryStockKits" ImageUrl="../Images/MenuIcons/kit.png" ResourceKey="mnuStockLevelKits"/>
+      <siteMapNode Key="InventoryStockParts" Url="~/StockLevelParts.aspx" Title="Parts" Permission="InventoryStockParts" ImageUrl="../Images/MenuIcons/parts.png" ResourceKey="mnuStockLevelParts"/>
+      <siteMapNode Key="NearExpiryItems" Url="~/NearExpiryItems.aspx" Title="Expired / Near Expiry Items" Permission="NearExpiryItems" ImageUrl="../Images/MenuIcons/expiry-items.png" ResourceKey="mnuNearExpiryItems"/>
+    </siteMapNode>
+    <siteMapNode Key="InventoryCount" Url="" Title="Inventory Count" Permission="" ImageUrl="../Images/MenuIcons/inventory-count.png" ResourceKey="mnuInventoryCount">
+      <siteMapNode Key="InventoryCountExpected" Url="" Title="Expected" Permission="" ImageUrl="../Images/MenuIcons/expected-count.png" ResourceKey="mnuInventoryCountExpected">
+        <siteMapNode Key="InventoryCountExpectedKits" Url="~/InventoryCountExpectedKits.aspx" Title="Kits" Permission="InventoryCountExpected" ImageUrl="../Images/MenuIcons/kit.png" ResourceKey="mnuStockLevelKits"/>
+        <siteMapNode Key="InventoryCountExpectedParts" Url="~/InventoryCountExpected.aspx" Title="Parts" Permission="InventoryCountExpected" ImageUrl="../Images/MenuIcons/parts.png" ResourceKey="mnuStockLevelParts"/>
+      </siteMapNode>
+      <siteMapNode Key="InventoryCountReconcile" Url="~/InventoryCountReconcile.aspx" Title="Reconcile" Permission="InventoryCountReconcile" ImageUrl="../Images/MenuIcons/reconcile-count.png" ResourceKey="mnuInventoryCountReconcile"/>
+      <siteMapNode Key="InventoryCountReport" Url="~/InventoryCountReport.aspx" Title="Report" Permission="InventoryCountReport" ImageUrl="../Images/MenuIcons/count-report.png" ResourceKey="mnuInventoryCountReport"/>
+    </siteMapNode>
+  </sitemapnode>
+  <sitemapnode Key="Reports" Url="" Title="Reports" Permission="" ImageUrl="../Images/MenuIcons/Reports.png" ResourceKey="mnuReports">
+    <siteMapNode Key="KitHistory" Url="~/KitHistory.aspx" Title="Kit History" Permission="KitHistory" ImageUrl="../Images/MenuIcons/kit-history.png" ResourceKey="mnuKitHistory"/>
+    <siteMapNode Key="RevenueProjection" Url="~/RevenueProjection.aspx" Title="Revenue Projection" Permission="RevenueProjection" ImageUrl="../Images/MenuIcons/RevenueProjection.png" ResourceKey="mnuRevenueProjection"/>
+
+    <siteMapNode Key="ReplenishmentPlanning" Url="~/ReplenishmentPlanning.aspx" Title="Replenishment Planning" Permission="ReplenishmentPlanning" ImageUrl="../Images/MenuIcons/RevenueProjection.png" ResourceKey="mnuReplenishmentPlanning"/>
+
+  </sitemapnode>
+  <sitemapnode Key="eParPlusReports" Url="" Title="Reports" Permission="" ImageUrl="../Images/MenuIcons/Reports.png" ResourceKey="mnueParPlusReports">
+    <siteMapNode Key="eParPlusLowInventoryReport" Url="~/eParPlusLowInventoryReport.aspx" Title="Low Inventory Report" Permission="ePar+.LowInventoryReport" ImageUrl="../Images/MenuIcons/eParPlusInventoryAmountsReport.png" ResourceKey="mnueParPlusLowInventoryReport"/>
+    <siteMapNode Key="eParPlusInventoryAmountsReport" Url="~/eParPlusInventoryAmountsReport.aspx" Title="Inventory Audit" Permission="ePar+.InventoryAmountsReport" ImageUrl="../Images/MenuIcons/eParPlusInventoryAmountsReport.png" ResourceKey="mnueParPlusInventoryAmountsReport"/>
+    <siteMapNode Key="eParPlusTransactionReport" Url="~/eParPlusTransactionReport.aspx" Title="Transaction Report" Permission="ePar+.TransactionReport" ImageUrl="../Images/MenuIcons/eParPlusInventoryAmountsReport.png" ResourceKey="mnueParPlusTransactionReport"/>
+    <siteMapNode Key="eParPlusConsumptionRateReport" Url="~/eParPlusConsumptionRateReport.aspx" Title="Consumption Rate Report" Permission="ePar+.ConsumptionRateReport" ImageUrl="../Images/MenuIcons/eParPlusInventoryAmountsReport.png" ResourceKey="mnueParPlusConsumptionRateReport"/>
+    <siteMapNode Key="eParPlusOffCartRateReport" Url="~/eParPlusOffCartRateReport.aspx" Title="OffCart Rate Report" Permission="ePar+.TransactionReport" ImageUrl="../Images/MenuIcons/eParPlusInventoryAmountsReport.png" ResourceKey="mnueParPlusOffCartRateReport"/>
+    <siteMapNode Key="eParPlusManualConsumptionReport" Url="~/eParPlusManualConsumptionReport.aspx" Title="Manual Consumption Report" Permission="ePar+.ManualConsumptionReport" ImageUrl="../Images/MenuIcons/eParPlusInventoryAmountsReport.png" ResourceKey="mnueParPlusManualConsumptionReport"/>
+    <siteMapNode Key="eParPlusShipAndBillReport" Url="~/eParPlusShipAndBillReport.aspx" Title="Ship and Bill Report" Permission="ePar+.eParPlusShipAndBillReport" ImageUrl="../Images/MenuIcons/eParPlusInventoryAmountsReport.png" ResourceKey="mnueParPlusShipAndBillReport"/>
+  </sitemapnode>
+  <sitemapnode Key="Configuration" Url="" Title="Configuration" Permission="" ImageUrl="../Images/MenuIcons/configuration.png" ResourceKey="mnuConfiguration">
+    <sitemapnode Key="Authorization" Url="" Title="Authorization" Permission="" ImageUrl="../Images/MenuIcons/authorization.png" ResourceKey="mnuAuthorization">
+      <siteMapNode Key="Role" Url="~/Role.aspx" Title="Role" Permission="Role" ImageUrl="../Images/MenuIcons/create-role.png" ResourceKey="mnuRole"/>
+      <siteMapNode Key="User" Url="~/User.aspx" Title="User" Permission="User" ImageUrl="../Images/MenuIcons/user.png" ResourceKey="mnuUser"/>
+    </sitemapnode>
+    <siteMapNode Key="ConfigurationSetting" Url="~/ConfigurationSetting.aspx" Title="Configuration Setting" Permission="Configuration" ImageUrl="../Images/MenuIcons/configuration-setting.png" ResourceKey="mnuConfigurationSettings"/>
+  </sitemapnode>
+  <sitemapnode Key="Administration" Url="" Title="Administration" Permission="" ImageUrl="../Images/MenuIcons/administration.png" ResourceKey="mnuAdministration">
+    <siteMapNode Key="Party" Url="~/Party.aspx" Title="Party" Permission="Party" ImageUrl="../Images/MenuIcons/party.png" ResourceKey="mnuParty"/>
+    <siteMapNode Key="Contact" Url="~/Contact.aspx" Title="Contact" Permission="Contact" ImageUrl="../Images/MenuIcons/contact.png" ResourceKey="mnuContact"/>
+    <siteMapNode Key="Customer" Url="~/eParPlusCustomer.aspx" Title=" Customer" Permission="Customer" ImageUrl="../Images/MenuIcons/party.png" ResourceKey="mnuCustomer"/>
+    <siteMapNode Key="CustomerPARLevel" Url="~/eParPlusCustomerPARLevel.aspx" Title="Customer PAR Level" Permission="CustomerPARLevel" ImageUrl="../Images/MenuIcons/par.png" ResourceKey="mnuCustomerPARLevel"/>
+    <siteMapNode Key="ProductLinePartDetail" Url="~/eParPlusProductLinePartDetail.aspx" Title=" Product Line Part Detail" Permission="ProductLinePartDetail" ImageUrl="../Images/MenuIcons/party.png" ResourceKey="mnuProductLinePartDetail"/>
+    <siteMapNode Key="SalesOfficeLocation" Url="~/SalesOfficeLocation.aspx" Title="Sales Office Location" Permission="SalesOfficeLocation" ImageUrl="../Images/MenuIcons/sales-office-locaiton.png" ResourceKey="mnuSalesOfficeLocation"/>
+    <siteMapNode Key="PARLevel" Url="~/PARLevel.aspx" Title="PAR Level" Permission="PARLevel" ImageUrl="../Images/MenuIcons/par.png" ResourceKey="mnuPARLevel"/>
+    <siteMapNode Key="eParPlusNotificationSetup" Url="~/eParPlusNotificationSetup.aspx" Title="Notification Setup" Permission="ePar+.NotificationSetup" ImageUrl="../Images/MenuIcons/eParPlusNotification.png" ResourceKey="mnueParNotificationSetup"/>
+    <siteMapNode Key="eParReaderDashboard" Url="~/mnueParReaderDashboard.aspx" Title="Reader Dashboard" Permission="ePar+.eParReaderDashboard" ImageUrl="../Images/MenuIcons/eParPlusNotification.png" ResourceKey="mnueParReaderDashboard"/>
+    
+  </sitemapnode>
+</sitemapnode>
